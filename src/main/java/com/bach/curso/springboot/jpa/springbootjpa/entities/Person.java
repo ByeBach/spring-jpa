@@ -14,21 +14,20 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private String name;
-    private String lastName;
+    private String lastname;
 
-    @Column(name = "programming_lenguage")
-    private String programmingLenguage;
+    @Column(name = "programming_language")
+    private String programmingLanguage;
 
     //jpa utiliza un constructor sin argumentos para crear el objeto
     public Person() {
     }
-    public Person(Long id, String name, String lastName, String programmingLenguage) {
+    public Person(Long id, String name, String lastname, String programmingLanguage) {
         this.id = id;
         this.name = name;
-        this.lastName = lastName;
-        this.programmingLenguage = programmingLenguage;
+        this.lastname = lastname;
+        this.programmingLanguage = programmingLanguage;
     }
     public Long getId() {
         return id;
@@ -42,23 +41,23 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
-    public String getProgrammingLenguage() {
-        return programmingLenguage;
+    public String getProgrammingLanguage() {
+        return programmingLanguage;
     }
-    public void setProgrammingLenguage(String programmingLenguage) {
-        this.programmingLenguage = programmingLenguage;
+    public void setProgrammingLanguage(String programmingLanguage) {
+        this.programmingLanguage = programmingLanguage;
     }
     @Override
     public String toString() {
-        return "Person [id=" + id + ", name=" + name + ", lastName=" + lastName + ", programmingLenguage="
-                + programmingLenguage + "]";
+        return "Person [id=" + id + ", name=" + name + ", lastName=" + lastname + ", programmingLenguage="+ programmingLanguage + "]";
     }
+   
     
     
 }
