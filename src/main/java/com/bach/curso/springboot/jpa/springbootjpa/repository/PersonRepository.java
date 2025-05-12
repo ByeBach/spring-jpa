@@ -19,6 +19,8 @@ public interface PersonRepository extends CrudRepository<Person, Long> {
     @Query("select p from Person p where p.name like %?1%")
     Optional<Person> findOneLikeName(String name);
 
+    //Optional<Person> findByeNameContaing(String name); ocurre un error aunque no lo este llamando ?) wtf
+
     List<Person> findByProgrammingLanguage(String programmingLanguage);
 
     @Query("SELECT p FROM Person p WHERE p.programmingLanguage=?1 and p.name=?2")
