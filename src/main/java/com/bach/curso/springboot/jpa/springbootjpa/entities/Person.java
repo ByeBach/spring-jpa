@@ -29,6 +29,13 @@ public class Person {
         this.lastname = lastname;
         this.programmingLanguage = programmingLanguage;
     }
+    
+
+    public Person(String name, String lastname) {
+        this.name = name;
+        this.lastname = lastname;
+    }
+    
     public Long getId() {
         return id;
     }
